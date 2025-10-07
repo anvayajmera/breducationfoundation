@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>FAQ - Ed Foundation BR</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/education/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets.vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+  <!-- Site for Education Foundation of Bridgewater-Raritan -->
+
+  <style>
+    /* F.A.Q Section */
+    #faq-list {
+      padding: 0;
+      list-style: none;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #faq-list li {
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+
+    /* FAQ question styling */
+    #faq-list a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 30px;
+      color: #2a2a2a;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* prevent the icon from shifting */
+    #faq-list a i {
+      color: #0d6efd; /* Changed from red to blue */
+      font-size: 22px;
+      margin-left: 20px;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+    }
+
+    #faq-list a:hover {
+      color: #0d6efd; /* Changed from red to blue */
+    }
+
+    /* when expanded, rotate the icon */
+    #faq-list a[aria-expanded="true"] i {
+      transform: rotate(135deg);
+    }
+
+    /* Search Container */
+    .faq-search-container {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      position: relative;
+    }
+
+    #faq-search {
+      width: 100%;
+      padding: 18px 30px;
+      border: 3px solid #0d6efd; /* Changed from red to blue */
+      border-radius: 50px;
+      font-size: 18px;
+      font-family: "Raleway", sans-serif;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #faq-search:focus {
+      outline: none;
+      box-shadow: 0 0 20px rgba(13, 110, 253, 0.15); /* Adjusted shadow to blue */
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #0d6efd; /* Changed from red to blue */
+      font-size: 20px;
+    }
+
+    /* Answer Styling */
+    .collapse {
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .collapse:not(.show) {
+      display: block;
+      overflow: hidden;
+      max-height: 0;
+    }
+
+    .collapse.show {
+      max-height: 500px;
+    }
+
+    /* FIX: padding is on the static wrapper div to prevent text reflow during animation */
+    .faq-answer-content {
+        padding: 0 30px 25px;
+    }
+
+    /* FIX: padding and its transition removed from the p tag itself */
+    .collapse p {
+        padding: 0;
+        color: #555;
+        line-height: 1.7;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    /* Highlighting */
+    .highlight {
+      background: rgba(13, 110, 253, 0.15); /* Adjusted highlight to blue */
+      border-bottom: 2px solid #0d6efd; /* Changed from red to blue */
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    /* ensure our dedicated text spans behave nicely */
+    .question-text,
+    .answer-text {
+      display: inline-block;
+    }
+
+    .background-decorations .decor-icon {
+        color: #adb5bd; /* Gray for default icons */
+    }
+
+    .background-decorations .decor-icon.red {
+        color: #0d6efd; /* Blue for "red" icons */
+    }
+  </style>
+
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+  <h1 class="sitename">Ed Foundation BR</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>About us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="news.html">News</a></li>
+              <li><a href="trustees.html">Trustees</a></li>
+              <li><a href="service-awards.html">Service Awards</a></li>
+              <li><a href="faq.html" class="active">FAQs</a></li>
+            </ul>
+          </li>
+
+          <li><a href="grants.html">Grants</a></li>
+          <li><a href="golf.html">Golf</a></li>
+          <li><a href="how-to-help.html">How to help</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+
+      <!-- decorations container is now INSIDE the FAQ section -->
+      <div class="background-decorations">
+         
+
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-header section-title"> <!-- Modified to match starter page styling -->
+          <h2>Frequently Asked Questions</h2>
+          <p>Answers about the Education Foundation of Bridgewater-Raritan.</p>
+        </div>
+
+        <div class="faq-search-container">
+          <input type="text" id="faq-search" placeholder="Search questions...">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <ul id="faq-list">
+          <!-- Q1 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq1" aria-expanded="false" class="collapsed">
+              <span class="question-text">What is the Education Foundation of Bridgewater-Raritan</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq1" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">The Education Foundation of Bridgewater-Raritan, Inc. is a non-profit organization that is run by people (trustees) who live or work in the area and are dedicated to raising funds from individuals, corporations or other foundations to pay for innovative projects or programs not available through public funding. Foundation funds are not a substitute or replacement for governmental support. We are a Federally recognized 501 c 3 organization.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q2 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq2" aria-expanded="false" class="collapsed">
+              <span class="question-text">Is the Foundation a part of the school district?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq2" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">No. The Foundation is totally autonomous and does not receive any funding or tax dollars from the school district or either of the towns.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q3 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq3" aria-expanded="false" class="collapsed">
+              <span class="question-text">What does the Foundation do?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq3" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">Each year, the Foundation provides grants for unique scientific, cultural, artistic and scholastic programs and technologies that benefit a significant number of students. The grants are not intended as a substitute or replacement for governmental support. Rather, resources are used to support creative approaches to teaching and learning which are not funded by tax dollars.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q4 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq4" aria-expanded="false" class="collapsed">
+              <span class="question-text">Who are the members of the Foundation?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq4" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">The Foundation is administered solely by volunteers made up of local citizens, district teachers and parents who are dedicated to enriching the education of the children in our schools. These volunteers are known as trustees.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q5 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq5" aria-expanded="false" class="collapsed">
+              <span class="question-text">Where does the Foundation get its money?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq5" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">All money is obtained through various fundraising efforts conducted by the trustees, such as the Annual Campaign, Teacher Tribute Program, the annual Gala, and our Memorial Program. In addition, grants and donations are solicited from local corporations.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q6 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq6" aria-expanded="false" class="collapsed">
+              <span class="question-text">Are donations tax deductible?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq6" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">Yes, donations are tax deductible as permitted by law. We are a non-profit corporation chartered under Section 501 (C)(3) of the Internal Revenue Service Code.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q7 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq7" aria-expanded="false" class="collapsed">
+              <span class="question-text">How do teachers or administrators get a grant?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq7" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">Every year, teachers and administrators have the opportunity to submit a grant application detailing their project and what makes it unique, how many students will be impacted by the grant and the amount of money they will need. Then, a grant committee comprised of Foundation trustees and district teachers/administrators review the grants and determine which grants should be awarded for that year.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q8 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq8" aria-expanded="false" class="collapsed">
+              <span class="question-text">How large can a grant be?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq8" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">Presently we have two grant programs, the Mini-Grant Program and the Large Grant Program. The Mini-Grant Program funds smaller projects up to $1,500 each. Recently, the Foundation funded a large grant at Eisenhower Intermediate School. The M.A.R.E. Program at Eisenhower received approximately $30,000 from the Foundation over a three year period.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q9 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq9" aria-expanded="false" class="collapsed">
+              <span class="question-text">How much money has the Foundation donated to the schools?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq9" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">Since its inceptions in 1993, the Foundation has distributed nearly $900,000 for programs, projects and scholarships benefiting a large number of district students.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q10 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq10" aria-expanded="false" class="collapsed">
+              <span class="question-text">Has my child’s school ever received a grant?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq10" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">Absolutely! Over the years, every school in Bridgewater-Raritan has received multiple grants from the Foundation.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q11 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq11" aria-expanded="false" class="collapsed">
+              <span class="question-text">How can I help the Foundation?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq11" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">There are two ways you can help the Foundation. If you aren’t able to volunteer with us you can make a monetary donation to the Foundation. Donations can be made at any time during the year. They can be made as a simple donation or in honor of a teacher or in memory of a loved one. Click here to donate online or make a check payable to: The Education Foundation of Bridgewater-Raritan and mailed to PO Box 6044, Bridgewater, NJ, 08807.</span></p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Q12 -->
+          <li>
+            <a data-bs-toggle="collapse" href="#faq12" aria-expanded="false" class="collapsed">
+              <span class="question-text">Does your employer match donations?</span>
+              <i class="fas fa-plus"></i>
+            </a>
+            <div class="collapse" id="faq12" data-bs-parent="#faq-list">
+              <div class="faq-answer-content">
+                <p><span class="answer-text">Many employers have Matching Gift programs and will match employee donations made to tax-exempt charitable corporations. Please check with your Human Resources Department to see if your company participates.</span></p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Ed Foundation BR</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Hic solutasetp</h4>
+          <ul>
+            <li><a href="#">Molestiae accusamus iure</a></li>
+            <li><a href="#">Excepturi dignissimos</a></li>
+            <li><a href="#">Suscipit distinctio</a></li>
+            <li><a href="#">Dilecta</a></li>
+            <li><a href="#">Sit quas consectetur</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nobis illum</h4>
+          <ul>
+            <li><a href="#">Ipsam</a></li>
+            <li><a href="#">Laudantium dolorum</a></li>
+            <li><a href="#">Dinera</a></li>
+            <li><a href="#">Trodelas</a></li>
+            <li><a href="#">Flexo</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+      <div class="container copyright text-center mt-4">
+  <p>© <span>Copyright</span> <strong class="px-1 sitename">Education Foundation of Bridgewater-Raritan</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Ed Foundation BR
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('#faq-list li');
+      const searchInput = document.getElementById('faq-search');
+
+      // cache original text for search highlighting
+      faqItems.forEach(item => {
+        const questionTextElem = item.querySelector('.question-text');
+        const answerTextElem = item.querySelector('.answer-text');
+        questionTextElem.dataset.originalText = questionTextElem.innerHTML;
+        if (answerTextElem) {
+          answerTextElem.dataset.originalText = answerTextElem.innerHTML;
+        }
+      });
+
+      function highlightText(text, searchTerm) {
+        if (!searchTerm) return text;
+        const regex = new RegExp(`(${searchTerm})`, 'gi');
+        return text.replace(regex, '<span class="highlight">$1</span>');
+      }
+
+      function manageSearch(searchTerm) {
+        faqItems.forEach(item => {
+          const questionTextElem = item.querySelector('.question-text');
+          const answerTextElem = item.querySelector('.answer-text');
+          const originalQuestion = questionTextElem.dataset.originalText;
+          const originalAnswer = answerTextElem ? answerTextElem.dataset.originalText : '';
+
+          questionTextElem.innerHTML = originalQuestion;
+          if (answerTextElem) answerTextElem.innerHTML = originalAnswer;
+          item.classList.remove('search-highlight');
+
+          const qText = questionTextElem.textContent.toLowerCase();
+          const aText = answerTextElem ? answerTextElem.textContent.toLowerCase() : '';
+          const searchTermLower = searchTerm.toLowerCase();
+          const collapseElem = item.querySelector('.collapse');
+
+          if (searchTerm && (qText.includes(searchTermLower) || aText.includes(searchTermLower))) {
+            questionTextElem.innerHTML = highlightText(originalQuestion, searchTerm);
+            if (answerTextElem) answerTextElem.innerHTML = highlightText(originalAnswer, searchTerm);
+            item.classList.add('search-highlight');
+            item.style.display = 'block';
+
+            if (collapseElem) {
+              bootstrap.Collapse.getOrCreateInstance(collapseElem).show();
+            }
+          } else if (searchTerm) {
+            item.style.display = 'none';
+          } else {
+            item.style.display = 'block';
+            if (collapseElem) {
+              bootstrap.Collapse.getOrCreateInstance(collapseElem).hide();
+            }
+          }
+        });
+      }
+
+      searchInput.addEventListener('input', function() {
+        manageSearch(this.value.trim());
+      });
+
+      // FIX: changed event listeners from 'shown/hidden' to 'show/hide'
+      // this makes the icon animation start immediately with the accordion
+      faqItems.forEach(item => {
+        const aElem = item.querySelector('a');
+        const collapseElem = item.querySelector('.collapse');
+
+        if (collapseElem && aElem) {
+          collapseElem.addEventListener('show.bs.collapse', function() {
+            aElem.setAttribute('aria-expanded', 'true');
+            aElem.classList.remove('collapsed');
+          });
+
+          collapseElem.addEventListener('hide.bs.collapse', function() {
+            aElem.setAttribute('aria-expanded', 'false');
+            aElem.classList.add('collapsed');
+          });
+        }
+
+      });
+    });
+  </script>
+
+</body>
+
+</html>
