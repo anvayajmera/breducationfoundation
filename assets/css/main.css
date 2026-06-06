@@ -1910,9 +1910,11 @@ body.index-page .feature-cards-section {
 # Clients Section
 --------------------------------------------------------------*/
 .clients {
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  background: #f8f8f8;
+  box-shadow: 0 0 0 100vmax #f8f8f8;
+  clip-path: inset(0 -100vmax);
   margin-top: 28px;
-  padding: 22px 0 0;
+  padding: 22px 0 24px;
   position: relative;
   scroll-margin-top: calc(var(--header-offset) + 18px);
   z-index: 1;
@@ -1949,32 +1951,37 @@ body.index-page .feature-cards-section {
   transform: translateY(-2px);
 }
 
-.clients .sponsor-text-slide {
-  min-width: 165px;
-}
-
-.clients .sponsor-wordmark {
-  align-items: center;
-  color: #202735;
-  display: inline-flex;
-  font-family: var(--heading-font);
-  font-size: 0.98rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1.25;
-  min-height: 58px;
-  text-align: center;
-  width: 165px;
-}
-
 .clients .swiper-wrapper {
   height: auto;
+}
+
+.clients .swiper-pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 8px;
+  position: relative;
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet {
+  background-color: color-mix(in srgb, var(--default-color), transparent 78%);
+  flex: 0 0 auto;
+  height: 7px;
+  margin: 0 !important;
+  opacity: 1;
+  width: 7px;
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
 }
 
 @media (max-width: 575px) {
   .clients {
     margin-top: 22px;
-    padding-top: 18px;
+    padding: 18px 0 20px;
   }
 
   .clients .sponsor-strip-title {
@@ -1994,10 +2001,14 @@ body.index-page .feature-cards-section {
     max-width: 138px;
   }
 
-  .clients .sponsor-wordmark {
-    font-size: 0.78rem;
-    min-height: 50px;
-    width: 138px;
+  .clients .swiper-pagination {
+    gap: 5px;
+    margin-top: 6px;
+  }
+
+  .clients .swiper-pagination .swiper-pagination-bullet {
+    height: 6px;
+    width: 6px;
   }
 }
 
