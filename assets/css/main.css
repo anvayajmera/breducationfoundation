@@ -993,6 +993,10 @@ section,
   overflow: hidden;
 }
 
+body.index-page .feature-cards-section {
+  padding-bottom: 34px;
+}
+
 .feature-cards-section::before {
   content: "";
   position: absolute;
@@ -1905,35 +1909,96 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+.clients {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  margin-top: 28px;
+  padding: 22px 0 0;
+  position: relative;
+  scroll-margin-top: calc(var(--header-offset) + 18px);
+  z-index: 1;
+}
+
+.clients .sponsor-strip-title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.clients .sponsor-strip-title h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.clients .swiper-slide {
+  align-items: center;
+  display: flex;
+  height: 76px;
+  justify-content: center;
+}
+
 .clients .swiper-slide img {
-  opacity: 0.5;
-  transition: 0.3s;
-  filter: grayscale(100);
+  max-height: 58px;
+  max-width: 165px;
+  object-fit: contain;
+  opacity: 1;
+  transition: transform 0.25s ease;
+  width: auto;
 }
 
 .clients .swiper-slide img:hover {
-  filter: none;
-  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.clients .sponsor-text-slide {
+  min-width: 165px;
+}
+
+.clients .sponsor-wordmark {
+  align-items: center;
+  color: #202735;
+  display: inline-flex;
+  font-family: var(--heading-font);
+  font-size: 0.98rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 58px;
+  text-align: center;
+  width: 165px;
 }
 
 .clients .swiper-wrapper {
   height: auto;
 }
 
-.clients .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
+@media (max-width: 575px) {
+  .clients {
+    margin-top: 22px;
+    padding-top: 18px;
+  }
 
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
+  .clients .sponsor-strip-title {
+    margin-bottom: 8px;
+  }
 
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  .clients .sponsor-strip-title h2 {
+    font-size: 1.1rem;
+  }
+
+  .clients .swiper-slide {
+    height: 68px;
+  }
+
+  .clients .swiper-slide img {
+    max-height: 50px;
+    max-width: 138px;
+  }
+
+  .clients .sponsor-wordmark {
+    font-size: 0.78rem;
+    min-height: 50px;
+    width: 138px;
+  }
 }
 
 /*--------------------------------------------------------------
