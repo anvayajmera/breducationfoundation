@@ -5325,3 +5325,418 @@ body.club-volleyball-page .main {
     bottom: 16px;
   }
 }
+
+/*--------------------------------------------------------------
+# Home Style Alignment
+--------------------------------------------------------------*/
+.support-us-page .support-hero {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 92%) 50%, color-mix(in srgb, var(--accent-color), transparent 96%) 25%, transparent 50%);
+  padding: calc(var(--header-offset) + 32px) 0 70px;
+}
+
+.support-us-page .support-hero::before {
+  background: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--accent-color), transparent 90%), transparent 40%);
+  opacity: 1;
+}
+
+.support-us-page .support-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.support-us-page .support-lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.support-us-page .support-actions {
+  gap: 15px;
+}
+
+.support-us-page .support-btn,
+.support-us-page .support-btn-outline {
+  border: 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+}
+
+.support-us-page .support-btn {
+  box-shadow: 0 6px 18px rgba(1, 30, 44, 0.18);
+}
+
+.support-us-page .support-btn-outline {
+  background: var(--surface-color);
+  color: var(--heading-color);
+  box-shadow: 0 8px 16px rgba(1, 30, 44, 0.08);
+}
+
+.support-us-page .support-btn:hover,
+.support-us-page .support-btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(1, 30, 44, 0.18);
+}
+
+.support-us-page .support-btn-outline:hover {
+  color: var(--heading-color);
+}
+
+.support-us-page .support-hero-card {
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(1, 30, 44, 0.08);
+  padding: 2rem;
+}
+
+@media (max-width: 992px) {
+  .support-us-page .support-hero {
+    padding: calc(var(--header-offset) + 20px) 0 60px;
+  }
+
+  .support-us-page .support-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .support-us-page .support-title {
+    font-size: 2rem;
+  }
+
+  .support-us-page .support-actions :is(a, button) {
+    width: 100%;
+  }
+}
+
+/* Shared hero treatment from the home page */
+.grants-page .grants-hero,
+.golf-outing-page .golf-hero {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 92%) 50%, color-mix(in srgb, var(--accent-color), transparent 96%) 25%, transparent 50%);
+  border-bottom: 0;
+  padding: calc(var(--header-offset) + 32px) 0 70px;
+}
+
+.grants-page .grants-hero::before,
+.golf-outing-page .golf-hero::before {
+  background: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--accent-color), transparent 90%), transparent 40%);
+  opacity: 1;
+}
+
+:is(.support-us-page, .grants-page, .golf-outing-page)
+  :is(.support-eyebrow, .grants-eyebrow, .golf-eyebrow) {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.grants-page .grants-title,
+.golf-outing-page .golf-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.grants-page .grants-lead,
+.golf-outing-page .golf-lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.grants-page .grants-actions,
+.golf-outing-page .golf-actions {
+  gap: 15px;
+  margin: 0 0 24px;
+}
+
+.grants-page .grants-btn,
+.grants-page .grants-btn-outline,
+.golf-outing-page .golf-btn,
+.golf-outing-page .golf-btn-outline {
+  border: 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 48px;
+  padding: 14px 28px;
+  transition: all 0.3s ease;
+}
+
+.grants-page .grants-btn,
+.golf-outing-page .golf-btn {
+  box-shadow: 0 6px 18px rgba(1, 30, 44, 0.18);
+}
+
+.grants-page .grants-btn-outline,
+.golf-outing-page .golf-btn-outline {
+  background: var(--surface-color);
+  color: var(--heading-color);
+  box-shadow: 0 8px 16px rgba(1, 30, 44, 0.08);
+}
+
+.grants-page .grants-btn:hover,
+.grants-page .grants-btn-outline:hover,
+.golf-outing-page .golf-btn:hover,
+.golf-outing-page .golf-btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(1, 30, 44, 0.18);
+}
+
+.grants-page .grants-btn-outline:hover,
+.golf-outing-page .golf-btn-outline:hover {
+  color: var(--heading-color);
+}
+
+/* White cards use the same surface, radius, and shadow as Home */
+.support-us-page .support-badge,
+.support-us-page .impact-item,
+.support-us-page .ways-card,
+.grants-page .highlight-card,
+.grants-page .grants-hero-card,
+.grants-page .grant-category-card,
+.grants-page .grant-option-card,
+.golf-outing-page .golf-summary-card,
+.golf-outing-page .golf-sponsor-card,
+.golf-outing-page .golf-pay-card,
+.golf-outing-page .bbq-unified-card {
+  background: var(--surface-color);
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(1, 30, 44, 0.08);
+}
+
+.support-us-page .support-badge,
+.grants-page .highlight-card {
+  padding: 14px 18px;
+}
+
+.support-us-page .impact-item {
+  background: color-mix(in srgb, var(--heading-color), transparent 96%);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.support-us-page .support-card-tag,
+.grants-page .grants-tag,
+.grants-page .option-tag,
+.golf-outing-page .pay-badge-paypal,
+.golf-outing-page .pay-badge-venmo {
+  border-radius: 8px;
+}
+
+/* Support Us cards mirror the initiative cards on Home */
+.support-us-page .ways-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+  position: relative;
+}
+
+.support-us-page .ways-section::before {
+  display: none;
+}
+
+.support-us-page .ways-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.support-us-page .ways-card {
+  gap: 1.25rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.support-us-page .ways-card::before {
+  display: none;
+}
+
+.support-us-page .ways-card:hover {
+  border-color: transparent;
+  box-shadow: 0 18px 45px rgba(1, 30, 44, 0.14);
+  transform: translateY(-10px);
+}
+
+.support-us-page .ways-icon {
+  background: color-mix(in srgb, var(--heading-color), transparent 90%);
+  border: 0;
+  border-radius: 12px;
+  color: var(--heading-color);
+  height: 60px;
+  margin-bottom: 8px;
+  width: 60px;
+}
+
+/* Grants cards mirror Home's feature cards */
+.grants-page .grants-hero-card,
+.grants-page .grant-category-card,
+.grants-page .grant-option-card {
+  padding: 2rem;
+}
+
+.grants-page .grants-highlights {
+  gap: 12px;
+}
+
+.grants-page .grant-categories {
+  background: #f6f6f6;
+  position: relative;
+}
+
+.grants-page .grant-categories::before {
+  display: none;
+}
+
+.grants-page .grant-categories .container {
+  position: relative;
+  z-index: 1;
+}
+
+.grants-page .grant-category-card::before,
+.grants-page .apply-card::before {
+  display: none;
+}
+
+.grants-page .grant-category-card {
+  transition: all 0.3s ease;
+}
+
+.grants-page .grant-category-card:hover {
+  border-color: transparent;
+  box-shadow: 0 18px 45px rgba(1, 30, 44, 0.14);
+  transform: translateY(-10px);
+}
+
+.grants-page .grant-category-icon {
+  background: color-mix(in srgb, var(--heading-color), transparent 90%);
+  border: 0;
+  border-radius: 12px;
+  color: var(--heading-color);
+  height: 60px;
+  width: 60px;
+}
+
+.grants-page .grant-option-card,
+.grants-page .grant-option-card.secondary {
+  background: var(--surface-color);
+  border: 0;
+}
+
+.grants-page .grant-option-card ul {
+  gap: 12px;
+}
+
+/* Golf page uses the same image and card treatment as Home */
+.golf-outing-page .golf-flyer {
+  background: transparent;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 0;
+}
+
+.golf-outing-page .golf-flyer img {
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(1, 30, 44, 0.22);
+  transition: all 0.5s ease;
+}
+
+.golf-outing-page .golf-flyer img:hover {
+  box-shadow: 0 28px 60px rgba(1, 30, 44, 0.3);
+  transform: translateY(-4px);
+}
+
+.golf-outing-page .golf-sponsorship {
+  background: #f6f6f6;
+  position: relative;
+}
+
+.golf-outing-page .golf-sponsorship::before {
+  display: none;
+}
+
+.golf-outing-page .golf-sponsorship .container {
+  position: relative;
+  z-index: 1;
+}
+
+.golf-outing-page .golf-summary-card,
+.golf-outing-page .golf-sponsor-card,
+.golf-outing-page .golf-pay-card {
+  padding: 2rem;
+}
+
+.golf-outing-page .summary-tile {
+  background: color-mix(in srgb, var(--heading-color), transparent 96%);
+  border: 0;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 8px;
+}
+
+.golf-outing-page .sponsor-levels li {
+  background: color-mix(in srgb, var(--heading-color), transparent 96%);
+  border-radius: 8px;
+}
+
+.golf-outing-page .sponsor-levels .level-price {
+  border: 0;
+  border-radius: 8px;
+}
+
+.golf-outing-page .precheckout-form,
+.golf-outing-page .paypal-live-wrap {
+  border-radius: 8px;
+}
+
+.golf-outing-page .precheckout-form .form-control,
+.golf-outing-page .precheckout-form .form-select,
+.golf-outing-page .precheckout-form .form-control:focus,
+.golf-outing-page .precheckout-form .form-select:focus {
+  border-radius: 8px;
+}
+
+.golf-outing-page .bbq-unified-card {
+  padding: 2rem;
+}
+
+.golf-outing-page .bbq-image-wrap {
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(1, 30, 44, 0.08);
+}
+
+@media (max-width: 992px) {
+  .grants-page .grants-hero,
+  .golf-outing-page .golf-hero {
+    padding: calc(var(--header-offset) + 20px) 0 60px;
+    text-align: center;
+  }
+
+  .grants-page .grants-title,
+  .golf-outing-page .golf-title {
+    font-size: 2.5rem;
+  }
+
+  .grants-page .grants-actions,
+  .golf-outing-page .golf-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .grants-page .grants-title,
+  .golf-outing-page .golf-title {
+    font-size: 2rem;
+  }
+
+  .grants-page .grants-actions :is(a, button),
+  .golf-outing-page .golf-actions :is(a, button) {
+    width: 100%;
+  }
+}
