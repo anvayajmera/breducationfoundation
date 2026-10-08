@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 960" role="img" aria-labelledby="title description">
+  <title id="title">Volleyball Tournament</title>
+  <desc id="description">BRHS Education Foundation Club spring tournament announcement. Details coming soon; follow the club on Instagram.</desc>
+  <rect width="760" height="960" fill="#faf7f4"/>
+  <rect width="760" height="22" fill="#b3262d"/>
+  <text x="60" y="106" fill="#8b2027" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2">BRHS EDUCATION FOUNDATION CLUB</text>
+  <line x1="60" y1="136" x2="700" y2="136" stroke="#d5c9c4" stroke-width="2"/>
+  <text x="60" y="300" fill="#1b1b1b" font-family="Arial, sans-serif" font-size="94" font-weight="700">VOLLEYBALL</text>
+  <text x="60" y="410" fill="#1b1b1b" font-family="Arial, sans-serif" font-size="94" font-weight="700">TOURNAMENT</text>
+  <text x="60" y="520" fill="#b3262d" font-family="Arial, sans-serif" font-size="41" font-weight="700">COMING THIS SPRING</text>
+  <text x="60" y="615" fill="#333" font-family="Arial, sans-serif" font-size="31">Tournament details will be announced soon.</text>
+  <line x1="60" y1="755" x2="700" y2="755" stroke="#d5c9c4" stroke-width="2"/>
+  <text x="60" y="821" fill="#333" font-family="Arial, sans-serif" font-size="29">Follow the club on Instagram</text>
+  <text x="60" y="867" fill="#8b2027" font-family="Arial, sans-serif" font-size="30" font-weight="700">@brhs_ed.foundation.club</text>
+</svg>

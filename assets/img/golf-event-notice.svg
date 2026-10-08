@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 960" role="img" aria-labelledby="title description">
+  <title id="title">Annual Golf Outing</title>
+  <desc id="description">Save the date for July 8, 2027 at Fox Hollow Golf Club in Branchburg. Event details coming soon.</desc>
+  <rect width="760" height="960" fill="#faf7f4"/>
+  <rect width="760" height="22" fill="#b3262d"/>
+  <text x="60" y="106" fill="#8b2027" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2">EDUCATION FOUNDATION OF BR</text>
+  <line x1="60" y1="136" x2="700" y2="136" stroke="#d5c9c4" stroke-width="2"/>
+  <text x="60" y="290" fill="#1b1b1b" font-family="Arial, sans-serif" font-size="91" font-weight="700">ANNUAL</text>
+  <text x="60" y="400" fill="#1b1b1b" font-family="Arial, sans-serif" font-size="91" font-weight="700">GOLF OUTING</text>
+  <text x="60" y="515" fill="#b3262d" font-family="Arial, sans-serif" font-size="43" font-weight="700">JULY 8, 2027</text>
+  <text x="60" y="604" fill="#333" font-family="Arial, sans-serif" font-size="31">Fox Hollow Golf Club</text>
+  <text x="60" y="650" fill="#333" font-family="Arial, sans-serif" font-size="31">Branchburg, New Jersey</text>
+  <line x1="60" y1="755" x2="700" y2="755" stroke="#d5c9c4" stroke-width="2"/>
+  <text x="60" y="821" fill="#333" font-family="Arial, sans-serif" font-size="29">Save the date</text>
+  <text x="60" y="867" fill="#8b2027" font-family="Arial, sans-serif" font-size="30" font-weight="700">More details coming soon</text>
+</svg>

@@ -5652,6 +5652,13 @@ body.club-volleyball-page .main {
   transform: translateY(-4px);
 }
 
+.golf-outing-page .golf-flyer,
+.club-volleyball-page .vball-flyer-card {
+  width: 100%;
+  max-width: 340px;
+  margin-inline: auto;
+}
+
 .golf-outing-page .golf-sponsorship {
   background: #f6f6f6;
   position: relative;
