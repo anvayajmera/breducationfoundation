@@ -5747,3 +5747,203 @@ body.club-volleyball-page .main {
     width: 100%;
   }
 }
+
+/* Seasonal fundraising announcement */
+.holiday-giving[hidden] {
+  display: none;
+}
+
+.support-us-page .holiday-giving {
+  background: color-mix(in srgb, var(--accent-color), var(--background-color) 97%);
+}
+
+.support-us-page .holiday-giving h2 {
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.support-us-page .holiday-event-details {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.support-us-page .holiday-event-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.support-us-page .holiday-event-detail > i {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.support-us-page .holiday-event-detail h3,
+.support-us-page .holiday-online-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.support-us-page .holiday-event-detail p,
+.support-us-page .holiday-online-card p {
+  margin-bottom: 0;
+}
+
+.support-us-page .holiday-online-card {
+  padding: 24px;
+  margin-bottom: 28px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 82%);
+  border-radius: 18px;
+}
+
+.support-us-page .holiday-online-card strong {
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+
+.support-us-page .holiday-flyer {
+  display: block;
+  max-width: 400px;
+  margin-inline: auto;
+  padding: 12px;
+  border-radius: 24px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 30px 50px -40px color-mix(in srgb, var(--default-color), transparent 65%);
+}
+
+.support-us-page .holiday-flyer img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+@media (max-width: 575px) {
+  .support-us-page .holiday-giving .support-actions a {
+    width: 100%;
+  }
+}
+
+/* Flowbite interactive toast, adapted to the site's CSS without Tailwind.
+   Reference: https://flowbite.com/docs/components/toast/#interactive-toast */
+.holiday-event-notice {
+  position: fixed;
+  right: 24px;
+  bottom: 76px;
+  z-index: 1040;
+  width: min(340px, calc(100vw - 32px));
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 5%), 0 12px 24px -6px rgb(0 0 0 / 12%);
+  animation: holiday-notice-enter .25s ease-out both;
+}
+
+.holiday-notice-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.holiday-notice-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
+.holiday-notice-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.holiday-notice-link {
+  display: grid;
+  gap: 7px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.holiday-notice-link:hover { color: #374151; }
+
+.holiday-notice-link strong {
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.holiday-notice-details {
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.holiday-notice-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.holiday-notice-actions > * {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.holiday-notice-dismiss {
+  color: #374151;
+  background: #fff;
+}
+
+.holiday-notice-dismiss:hover { background: #f3f4f6; }
+
+.holiday-notice-actions .holiday-notice-view {
+  color: #fff;
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+}
+
+.holiday-notice-view:hover { filter: brightness(.9); }
+
+.holiday-notice-link:focus-visible,
+.holiday-notice-actions > *:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+@keyframes holiday-notice-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 575px) {
+  .holiday-event-notice {
+    right: 16px;
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .holiday-event-notice { animation: none; }
+}

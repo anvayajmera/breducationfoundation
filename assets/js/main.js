@@ -12,6 +12,49 @@
   /**
    * Integration configuration (update when keys/endpoints are ready)
    */
+  function showHolidayEventNotice() {
+    const expiresAt = Date.parse('2026-12-06T00:00:00-05:00');
+    const eventSection = document.getElementById('holiday-giving');
+    function updateEventVisibility() {
+      const expired = Date.now() >= expiresAt;
+      if (eventSection) eventSection.hidden = expired;
+      if (expired) document.querySelector('.holiday-event-notice')?.remove();
+      return expired;
+    }
+    if (updateEventVisibility()) return;
+
+    const notice = document.createElement('aside');
+    notice.className = 'holiday-event-notice';
+    notice.setAttribute('aria-label', 'Kendra Scott fundraiser');
+    // Layout adapted from Flowbite's interactive toast (MIT):
+    // https://github.com/themesberg/flowbite/blob/main/content/components/toast.md
+    notice.innerHTML = `
+      <div class="holiday-notice-row">
+        <span class="holiday-notice-icon" aria-hidden="true"><i class="bi bi-exclamation-circle"></i></span>
+        <div class="holiday-notice-copy">
+          <a class="holiday-notice-link" href="/support-us/#holiday-giving">
+            <strong>Upcoming event</strong>
+            <span>Support the Education Foundation at the Kendra Scott Buying Event.</span>
+            <span class="holiday-notice-details">December 3 &middot; 6&ndash;8 PM</span>
+          </a>
+          <div class="holiday-notice-actions">
+            <button class="holiday-notice-dismiss" type="button">Not now</button>
+            <a class="holiday-notice-view" href="/support-us/#holiday-giving">View event <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>`;
+    notice.querySelector('button').addEventListener('click', () => {
+      notice.remove();
+    });
+    document.body.appendChild(notice);
+    // Recheck open tabs and tabs resumed after the event ends.
+    const expiryTimer = window.setInterval(() => {
+      if (updateEventVisibility()) window.clearInterval(expiryTimer);
+    }, 60000);
+    document.addEventListener('visibilitychange', updateEventVisibility);
+  }
+  showHolidayEventNotice();
+
   const integrationDefaults = {
     googleCloud: {
       defaultEndpoint: "https://script.google.com/macros/s/AKfycbwn3EcwdvT2JxakSoP29kdG7JgayS6kQus-CXFLs-V0RAbt2MQsJjf_jZhQ184oT5bSiw/exec",

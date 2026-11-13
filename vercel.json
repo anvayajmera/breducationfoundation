@@ -1,6 +1,16 @@
 {
   "redirects": [
     {
+      "source": "/grant-recipients",
+      "destination": "/grants/",
+      "permanent": false
+    },
+    {
+      "source": "/grant-recipients/:path*",
+      "destination": "/grants/",
+      "permanent": false
+    },
+    {
       "source": "/product/golf-sponsor",
       "destination": "/golf/",
       "permanent": true
